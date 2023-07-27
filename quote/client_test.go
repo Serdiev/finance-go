@@ -3,8 +3,8 @@ package quote
 import (
 	"testing"
 
-	finance "github.com/Serdiev/finance-go"
-	tests "github.com/Serdiev/finance-go/testing"
+	finance "github.com/piquette/finance-go"
+	tests "github.com/piquette/finance-go/testing"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -79,5 +79,5 @@ func TestGetBadQuote(t *testing.T) {
 
 	q, err := Get("TEST")
 	assert.Nil(t, q)
-	assert.Nil(t, err)
+	assert.Equal(t, "Can't find quote for symbol: TEST", err.Error())
 }

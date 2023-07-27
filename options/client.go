@@ -4,10 +4,10 @@ import (
 	"context"
 	"encoding/json"
 
-	finance "github.com/Serdiev/finance-go"
-	"github.com/Serdiev/finance-go/datetime"
-	form "github.com/Serdiev/finance-go/form"
-	"github.com/Serdiev/finance-go/iter"
+	finance "github.com/piquette/finance-go"
+	"github.com/piquette/finance-go/datetime"
+	form "github.com/piquette/finance-go/form"
+	"github.com/piquette/finance-go/iter"
 )
 
 // Client is used to invoke options APIs.
@@ -87,7 +87,7 @@ func (c Client) GetStraddleP(params *Params) *StraddleIter {
 	return &StraddleIter{iter.New(body, func(b *form.Values) (meta interface{}, values []interface{}, err error) {
 
 		resp := response{}
-		err = c.B.Call("v6/finance/options/"+params.UnderlyingSymbol, body, params.Context, &resp)
+		err = c.B.Call("/v7/finance/options/"+params.UnderlyingSymbol, body, params.Context, &resp)
 		if err != nil {
 			return
 		}

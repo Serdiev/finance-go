@@ -1,6 +1,6 @@
 # finance-go
 
-[![GoDoc](http://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/Serdiev/finance-go) [![Build Status](https://travis-ci.org/Serdiev/finance-go.svg?branch=master)](https://travis-ci.org/Serdiev/finance-go) [![Coverage Status](https://coveralls.io/repos/github/Serdiev/finance-go/badge.svg?branch=master)](https://coveralls.io/github/Serdiev/finance-go?branch=master)
+[![GoDoc](http://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/piquette/finance-go) [![Build Status](https://travis-ci.org/piquette/finance-go.svg?branch=master)](https://travis-ci.org/piquette/finance-go) [![Coverage Status](https://coveralls.io/repos/github/piquette/finance-go/badge.svg?branch=master)](https://coveralls.io/github/piquette/finance-go?branch=master)
 
 ## Summary
 
@@ -26,7 +26,7 @@ Options straddles | Yahoo finance
 
 ## Documentation
 
-A neatly formatted detailed list of implementation instructions and examples will be available on the [Serdiev website][api-docs].
+A neatly formatted detailed list of implementation instructions and examples will be available on the [piquette website][api-docs].
 
 For now, for details on all the functionality in this library, see the [GoDoc][godoc] documentation.
 
@@ -35,7 +35,7 @@ For now, for details on all the functionality in this library, see the [GoDoc][g
 This project supports modules and Go 1.13+. Add `finance-go` to your own project the usual way -
 
 ```sh
-go get github.com/Serdiev/finance-go
+go get github.com/piquette/finance-go
 ```
 
 ## Usage example
@@ -100,17 +100,17 @@ It also depends on a running instance of a test server [finance-mock], so make s
 
 ### Docker
 ```sh
-  docker run -p 12111:12111 Serdiev/finance-mock:latest
+  docker run -p 12111:12111 piquette/finance-mock:latest
 ```
 ### Brew
 
-    brew tap Serdiev/finance-mock
+    brew tap piquette/finance-mock
     brew install finance-mock
     finance-mock
 
 ### Go
 
-    go get -u github.com/Serdiev/finance-mock
+    go get -u github.com/piquette/finance-mock
     finance-mock
 
 Run all tests:
@@ -132,10 +132,10 @@ pull request][pulls]. Also please email or tweet me as needed.
 - Yahoo changes their finance APIs without warning, which is their right to do so. However, its annoying and leads to some instability in this project..
 - Big shoutout to Stripe and the team working on the [stripe-go][stripe] project, I took a lot of library design / implementation hints from them.
 
-[godoc]: http://godoc.org/github.com/Serdiev/finance-go
-[issues]: https://github.com/Serdiev/finance-go/issues/new
-[qtrn]: https://github.com/Serdiev/qtrn
-[pulls]: https://github.com/Serdiev/finance-go/pulls
-[finance-mock]: https://github.com/Serdiev/finance-mock
+[godoc]: http://godoc.org/github.com/piquette/finance-go
+[issues]: https://github.com/piquette/finance-go/issues/new
+[qtrn]: https://github.com/piquette/qtrn
+[pulls]: https://github.com/piquette/finance-go/pulls
+[finance-mock]: https://github.com/piquette/finance-mock
 [stripe]: https://github.com/stripe/stripe-go
-[api-docs]: https://Serdiev.io/projects/finance-go/
+[api-docs]: https://piquette.io/projects/finance-go/

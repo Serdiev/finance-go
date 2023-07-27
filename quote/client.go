@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"strings"
 
-	finance "github.com/Serdiev/finance-go"
-	chart "github.com/Serdiev/finance-go/chart"
-	"github.com/Serdiev/finance-go/datetime"
-	"github.com/Serdiev/finance-go/form"
-	"github.com/Serdiev/finance-go/iter"
+	finance "github.com/piquette/finance-go"
+	chart "github.com/piquette/finance-go/chart"
+	"github.com/piquette/finance-go/datetime"
+	"github.com/piquette/finance-go/form"
+	"github.com/piquette/finance-go/iter"
 )
 
 // Client is used to invoke quote APIs.
@@ -106,7 +106,7 @@ func (c Client) ListP(params *Params) *Iter {
 	return &Iter{iter.New(body, func(b *form.Values) (interface{}, []interface{}, error) {
 
 		resp := response{}
-		err := c.B.Call("/v6/finance/quote", body, params.Context, &resp)
+		err := c.B.Call("/v7/finance/quote", body, params.Context, &resp)
 		if err != nil {
 			err = finance.CreateRemoteError(err)
 		}

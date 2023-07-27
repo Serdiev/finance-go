@@ -1,4 +1,4 @@
-module github.com/Serdiev/finance-go
+module github.com/piquette/finance-go
 
 go 1.13
 
